@@ -13,6 +13,11 @@
 		AC6E36DB1F5060A400B0E707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6E36DA1F5060A400B0E707 /* Assets.xcassets */; };
 		AC6E36DE1F5060A400B0E707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6E36DC1F5060A400B0E707 /* LaunchScreen.storyboard */; };
 		AC6E36E91F5060A400B0E707 /* Game15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E36E81F5060A400B0E707 /* Game15Tests.swift */; };
+		AC6E36F41F506E0400B0E707 /* GameUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E36F31F506E0400B0E707 /* GameUIButton.swift */; };
+		AC6E36F61F50B2AD00B0E707 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E36F51F50B2AD00B0E707 /* InfoViewController.swift */; };
+		AC6E36F91F5150C500B0E707 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E36F81F5150C500B0E707 /* Game.swift */; };
+		AC6E36FB1F5165F700B0E707 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC6E36FA1F5165F700B0E707 /* OpenSans-Light.ttf */; };
+		AC6E36FE1F51661C00B0E707 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC6E36FD1F51661C00B0E707 /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		AC6E36E41F5060A400B0E707 /* Game15Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Game15Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6E36E81F5060A400B0E707 /* Game15Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game15Tests.swift; sourceTree = "<group>"; };
 		AC6E36EA1F5060A400B0E707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6E36F31F506E0400B0E707 /* GameUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameUIButton.swift; sourceTree = "<group>"; };
+		AC6E36F51F50B2AD00B0E707 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AC6E36F81F5150C500B0E707 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		AC6E36FA1F5165F700B0E707 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		AC6E36FD1F51661C00B0E707 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,9 @@
 		AC6E36C71F5060A400B0E707 = {
 			isa = PBXGroup;
 			children = (
+				AC6E36FC1F51660000B0E707 /* Resources */,
+				AC6E36F51F50B2AD00B0E707 /* InfoViewController.swift */,
+				AC6E36F81F5150C500B0E707 /* Game.swift */,
 				AC6E36D21F5060A400B0E707 /* Game15 */,
 				AC6E36E71F5060A400B0E707 /* Game15Tests */,
 				AC6E36D11F5060A400B0E707 /* Products */,
@@ -80,6 +93,7 @@
 				AC6E36D31F5060A400B0E707 /* AppDelegate.swift */,
 				AC6E36D51F5060A400B0E707 /* ViewController.swift */,
 				AC6E36D71F5060A400B0E707 /* Main.storyboard */,
+				AC6E36F31F506E0400B0E707 /* GameUIButton.swift */,
 				AC6E36DA1F5060A400B0E707 /* Assets.xcassets */,
 				AC6E36DC1F5060A400B0E707 /* LaunchScreen.storyboard */,
 				AC6E36DF1F5060A400B0E707 /* Info.plist */,
@@ -94,6 +108,15 @@
 				AC6E36EA1F5060A400B0E707 /* Info.plist */,
 			);
 			path = Game15Tests;
+			sourceTree = "<group>";
+		};
+		AC6E36FC1F51660000B0E707 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E36FD1F51661C00B0E707 /* OpenSans-Regular.ttf */,
+				AC6E36FA1F5165F700B0E707 /* OpenSans-Light.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +204,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6E36FE1F51661C00B0E707 /* OpenSans-Regular.ttf in Resources */,
 				AC6E36DE1F5060A400B0E707 /* LaunchScreen.storyboard in Resources */,
 				AC6E36DB1F5060A400B0E707 /* Assets.xcassets in Resources */,
+				AC6E36FB1F5165F700B0E707 /* OpenSans-Light.ttf in Resources */,
 				AC6E36D91F5060A400B0E707 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6E36D61F5060A400B0E707 /* ViewController.swift in Sources */,
+				AC6E36F91F5150C500B0E707 /* Game.swift in Sources */,
 				AC6E36D41F5060A400B0E707 /* AppDelegate.swift in Sources */,
+				AC6E36F61F50B2AD00B0E707 /* InfoViewController.swift in Sources */,
+				AC6E36F41F506E0400B0E707 /* GameUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +440,7 @@
 				AC6E36EF1F5060A500B0E707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC6E36F01F5060A500B0E707 /* Build configuration list for PBXNativeTarget "Game15Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +449,7 @@
 				AC6E36F21F5060A500B0E707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

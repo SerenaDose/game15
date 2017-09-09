@@ -1,14 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Game15" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +27,372 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-Px-4OX">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaj-dz-yRX">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="138"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zB-ID-iON">
+                                                <rect key="frame" x="8" y="8" width="22" height="22"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.090196078430000007" green="0.30196078430000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="J0E-Dz-j7F" kind="show" id="CDF-sf-QtH"/>
+                                                </connections>
+                                            </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCq-Xy-h1T">
+                                                <rect key="frame" x="286" y="8" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.76444170730000005" green="0.94801210729999996" blue="0.88681193550000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nb-Pn-cpC">
+                                                <rect key="frame" x="112.5" y="89" width="118" height="41"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                <color key="textColor" red="0.015686274509803921" green="0.18431372549019609" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0Nb-Pn-cpC" firstAttribute="centerX" secondItem="qaj-dz-yRX" secondAttribute="centerX" id="9ZI-pk-QE8"/>
+                                            <constraint firstAttribute="trailing" secondItem="OCq-Xy-h1T" secondAttribute="trailing" constant="8" id="BUb-qF-yhN"/>
+                                            <constraint firstItem="0Nb-Pn-cpC" firstAttribute="top" secondItem="OCq-Xy-h1T" secondAttribute="bottom" constant="50" id="HMY-jp-aZ4"/>
+                                            <constraint firstItem="0zB-ID-iON" firstAttribute="top" secondItem="qaj-dz-yRX" secondAttribute="top" constant="8" id="T18-i2-7Ts"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Nb-Pn-cpC" secondAttribute="bottom" constant="8" id="TQO-6a-uwG"/>
+                                            <constraint firstItem="OCq-Xy-h1T" firstAttribute="top" secondItem="qaj-dz-yRX" secondAttribute="top" constant="8" id="X5M-Zq-WBF"/>
+                                            <constraint firstItem="0zB-ID-iON" firstAttribute="leading" secondItem="qaj-dz-yRX" secondAttribute="leading" constant="8" id="bW1-pN-IWW"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-Lt-3KG">
+                                        <rect key="frame" x="0.0" y="166" width="343" height="343"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="o87-MH-xjU">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="83"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aq-lW-oqe" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686274509807" green="0.99607843137254903" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.14117647058823529" green="0.42745098039215684" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7S-Vc-46l"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZE-SE-Hi2" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="87" y="0.0" width="82.5" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" red="0.14117647058823529" green="0.42745098039215684" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8s-45-Eht"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euh-jW-5rZ" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="173.5" y="0.0" width="83" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" red="0.14117647058823529" green="0.42745098039215684" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ClW-aw-5v4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut7-dT-aof" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="260.5" y="0.0" width="82.5" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="0.14117647058823529" green="0.42745098039215684" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9b8-9w-lBN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uSE-KM-ydn">
+                                                <rect key="frame" x="0.0" y="87" width="343" height="82.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgN-5e-fCu" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3L6-q5-u4c"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRQ-qE-OmZ" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="87" y="0.0" width="82.5" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOQ-de-rih"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq4-Yk-9t9" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="173.5" y="0.0" width="83" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="haM-9n-tUV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4n-gp-YBk" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="260.5" y="0.0" width="82.5" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5J-n9-twq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dU5-1S-uOi">
+                                                <rect key="frame" x="0.0" y="173.5" width="343" height="83"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-eI-2ur" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AsF-pQ-xyF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeY-XP-nMY" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="87" y="0.0" width="82.5" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="10">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEm-Pn-z67"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHo-Hg-UaK" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="173.5" y="0.0" width="83" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="11">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mff-g7-q5j"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxJ-GL-EyK" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="260.5" y="0.0" width="82.5" height="83"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="12">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6y-Oq-jzm"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cvy-0c-OtX">
+                                                <rect key="frame" x="0.0" y="260.5" width="343" height="82.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEF-qy-SFk" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="13">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzg-Js-zgk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-FE-hSs" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="87" y="0.0" width="82.5" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="14">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0G2-Ie-gVA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQW-0e-CD4" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="173.5" y="0.0" width="83" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="15">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uft-JP-GWq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysi-l7-gSc" customClass="GameUIButton" customModule="Game15" customModuleProvider="target">
+                                                        <rect key="frame" x="260.5" y="0.0" width="82.5" height="82.5"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title=" ">
+                                                            <color key="titleColor" red="0.14117647059999999" green="0.42745098040000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="gameButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H7Z-B0-cNZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="v2k-Lt-3KG" secondAttribute="height" multiplier="1:1" id="lZY-vd-FZm"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="UB0-bB-ecQ">
+                                        <rect key="frame" x="0.0" y="585" width="343" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6k-hx-hVI">
+                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="42"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="22"/>
+                                                <state key="normal" title="Easy">
+                                                    <color key="titleColor" red="0.99215686274509807" green="0.99607843137254903" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="easyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tav-SE-Knj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbD-2G-VeW">
+                                                <rect key="frame" x="201.5" y="0.0" width="141.5" height="42"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="22"/>
+                                                <state key="normal" title="Normal">
+                                                    <color key="titleColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="normalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1MW-O7-mO6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v2k-Lt-3KG" secondAttribute="trailing" id="2jQ-nS-Hsv"/>
+                                    <constraint firstItem="v2k-Lt-3KG" firstAttribute="leading" secondItem="w1g-Px-4OX" secondAttribute="leading" id="4SJ-av-4MY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41960784313725491" green="0.72549019607843135" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="w1g-Px-4OX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HXP-Wq-2cQ"/>
+                            <constraint firstItem="w1g-Px-4OX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uQ1-3G-RcY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w1g-Px-4OX" secondAttribute="trailing" id="wYV-kN-wjI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w1g-Px-4OX" secondAttribute="bottom" constant="20" id="zNg-wK-F5G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonEight" destination="i4n-gp-YBk" id="fFg-Gm-hIJ"/>
+                        <outlet property="buttonEleven" destination="fHo-Hg-UaK" id="czT-t9-xbi"/>
+                        <outlet property="buttonFifteen" destination="pQW-0e-CD4" id="OAY-uI-t4B"/>
+                        <outlet property="buttonFive" destination="jgN-5e-fCu" id="a2J-9f-feU"/>
+                        <outlet property="buttonFour" destination="ut7-dT-aof" id="kpe-AW-0t8"/>
+                        <outlet property="buttonFourteen" destination="8KB-FE-hSs" id="573-go-9wg"/>
+                        <outlet property="buttonNine" destination="8Hl-eI-2ur" id="aYG-u8-jPF"/>
+                        <outlet property="buttonOne" destination="4aq-lW-oqe" id="wTv-GC-NzE"/>
+                        <outlet property="buttonSeven" destination="Dq4-Yk-9t9" id="zE1-dh-ppG"/>
+                        <outlet property="buttonSix" destination="oRQ-qE-OmZ" id="uPq-FG-c4G"/>
+                        <outlet property="buttonSixteen" destination="Ysi-l7-gSc" id="YFL-x2-HHB"/>
+                        <outlet property="buttonTen" destination="xeY-XP-nMY" id="QhC-hW-Vko"/>
+                        <outlet property="buttonThirteen" destination="cEF-qy-SFk" id="sf7-B1-i4D"/>
+                        <outlet property="buttonThree" destination="euh-jW-5rZ" id="DJn-ue-Kaq"/>
+                        <outlet property="buttonTwelve" destination="YxJ-GL-EyK" id="zw2-12-NDY"/>
+                        <outlet property="buttonTwo" destination="8ZE-SE-Hi2" id="Ez5-za-WFe"/>
+                        <outlet property="labelStatus" destination="0Nb-Pn-cpC" id="TR7-9r-4Qg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WTJ-IQ-zoG">
+            <objects>
+                <viewController id="J0E-Dz-j7F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d50-cc-R2X"/>
+                        <viewControllerLayoutGuide type="bottom" id="y3n-de-AYj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zh7-jD-seT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRT-5A-vf1">
+                                <rect key="frame" x="50" y="274" width="275" height="120.5"/>
+                                <string key="text">Don’t worry about what other people fucking think. Never, never assume that what you have achieved is fucking good enough. Never let your guard down by thinking you’re fucking good enough.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l0-Kb-O74">
+                                <rect key="frame" x="16" y="18" width="52" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ysr-sP-3CV" kind="unwind" unwindAction="unwindToGameWithUnwindSegue:" id="p0u-rV-bOU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15365788606051559" green="0.15517925126903553" blue="0.15517925126903553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vRT-5A-vf1" firstAttribute="centerX" secondItem="zh7-jD-seT" secondAttribute="centerX" id="1xW-1P-D0l"/>
+                            <constraint firstItem="0l0-Kb-O74" firstAttribute="leading" secondItem="zh7-jD-seT" secondAttribute="leadingMargin" id="2Rp-HX-zy5"/>
+                            <constraint firstItem="vRT-5A-vf1" firstAttribute="centerY" secondItem="zh7-jD-seT" secondAttribute="centerY" id="4IQ-P3-Wkr"/>
+                            <constraint firstItem="0l0-Kb-O74" firstAttribute="top" secondItem="zh7-jD-seT" secondAttribute="topMargin" constant="18" id="bcy-mM-rjG"/>
+                            <constraint firstItem="vRT-5A-vf1" firstAttribute="leading" secondItem="zh7-jD-seT" secondAttribute="leading" constant="50" id="leU-bm-6H4"/>
+                            <constraint firstAttribute="trailing" secondItem="vRT-5A-vf1" secondAttribute="trailing" constant="50" id="x7z-Fu-KE7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fes-zY-Svn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ysr-sP-3CV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>
