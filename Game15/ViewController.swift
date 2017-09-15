@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum GameDifficulty: Int {
+    case easy = 50, medium = 500
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var buttonOne: GameUIButton!
@@ -41,22 +45,30 @@ class ViewController: UIViewController {
         gradientLayer.endPoint = CGPoint (x: 0.5, y: 1.5)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     
-        
-        
-        newGame(diff: 200)
+ 
+        newGame(diff: .medium)
     }
 
     var currentGame: Game!
     
     var moves = 0
 
-    func newGame(diff: Int){
+    func newGame(diff: GameDifficulty){
         
         moves = 0
         labelStatus.text = "Moves: \(moves)"
         currentGame = Game(difficulty: diff)
         currentGame.shuffle()
-        currentGame.printBoard()
+        //avoid didn't shuffle in easy mode
+        if diff == .easy {
+            
+            if currentGame.sorted(){
+                
+                while currentGame.sorted() {
+                    currentGame.shuffle()
+                }
+            }
+        }
         updateUI()
         
     }
@@ -70,7 +82,6 @@ class ViewController: UIViewController {
         let number = Int(string)
         
         currentGame.move(number: number!)
-        currentGame.printBoard()
         moves += 1
         labelStatus.text = "Moves: \(moves)"
         updateUI()
@@ -88,7 +99,7 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "New Game", message: "Are you sure you want to start a new game?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { (action: UIAlertAction!) in
-            self.newGame(diff: 50)
+            self.newGame(diff: .easy)
         }))
         
         alert.addAction(cancelAction)
@@ -100,7 +111,7 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "New Game", message: "Are you sure you want to start a new game?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { (action: UIAlertAction!) in
-            self.newGame(diff: 300)
+            self.newGame(diff: .medium)
         }))
         
         alert.addAction(cancelAction)
@@ -112,6 +123,7 @@ class ViewController: UIViewController {
     func updateUI(){
         
         let arrayButtons = currentGame.arrayButtons()
+        
         
         buttonOne.setTitle(String(describing: arrayButtons[0]), for: .normal)
         buttonTwo.setTitle(String(describing: arrayButtons[1]), for: .normal)

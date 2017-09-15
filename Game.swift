@@ -13,13 +13,10 @@ class Game {
     var board: [Int] = []
     
     private let dim = 16
+
+    private var difficulty: GameDifficulty
     
-    // var diff: Int
-    
-    private var difficulty: Int
-    
-    
-    init(difficulty: Int){
+    init(difficulty: GameDifficulty){
         
         for i in 1...dim {
             
@@ -28,8 +25,7 @@ class Game {
         }
         
         self.difficulty = difficulty
-        
-        
+  
     }
     
     func printBoard(){
@@ -39,12 +35,12 @@ class Game {
             let s = " "
             let number = String(board[i])
             
-            if board[i]<10{
+            if board[i] < 10{
                 print(s + number + s, terminator:"")
             }else{
                 print(number + s, terminator:"")
             }
-            if (i+1)%4==0 {
+            if (i + 1) % 4 == 0 {
                 print()
             }
             
@@ -53,15 +49,14 @@ class Game {
     
     func sorted() -> Bool{
         
-        var check = true
-        
         for i in 0...dim - 1 {
             
             if board[i] != i+1{
-                check = false    }
+                
+                return false    }
         }
         
-        return check
+        return true
         
     }
     
@@ -117,8 +112,7 @@ class Game {
     func shuffle() {
         
         var times = 0
-        while times < difficulty {
-            // b.shuffle();
+        while times < difficulty.rawValue {
             let random = Int(arc4random_uniform(15) + 1)
             move(number: random)
             times += 1;
