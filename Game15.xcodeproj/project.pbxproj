@@ -164,6 +164,7 @@
 				AC6E36CE1F5060A400B0E707 /* Resources */,
 				CACDA6F89EEFCD4E1D2A98D3 /* [CP] Embed Pods Frameworks */,
 				9AE7EF71BF28BB148BA2B400 /* [CP] Copy Pods Resources */,
+				AC97A7601FC60EF10067F742 /* Fabric  */,
 			);
 			buildRules = (
 			);
@@ -342,6 +343,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Game15Tests/Pods-Game15Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AC97A7601FC60EF10067F742 /* Fabric  */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Fabric ";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d990732c918f0726d12b6e54de580662af2416f7 1ffe5f36e2362fc60f69015cd2b6cdb553526aee03e426a35722c194b45576de";
 		};
 		CACDA6F89EEFCD4E1D2A98D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
