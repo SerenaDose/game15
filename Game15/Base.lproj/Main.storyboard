@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
         </array>
@@ -43,7 +49,7 @@
                                                     <segue destination="J0E-Dz-j7F" kind="show" id="CDF-sf-QtH"/>
                                                 </connections>
                                             </button>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCq-Xy-h1T">
+                                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCq-Xy-h1T">
                                                 <rect key="frame" x="286" y="8" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.76444170730000005" green="0.94801210729999996" blue="0.88681193550000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
@@ -361,14 +367,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRT-5A-vf1">
-                                <rect key="frame" x="50" y="274" width="275" height="120.5"/>
-                                <string key="text">Don’t worry about what other people fucking think. Never, never assume that what you have achieved is fucking good enough. Never let your guard down by thinking you’re fucking good enough.</string>
+                                <rect key="frame" x="50" y="294" width="275" height="80.5"/>
+                                <string key="text">How to play:
+reorder the numbers from 1 to 15.
+
+Made with love by S.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l0-Kb-O74">
-                                <rect key="frame" x="16" y="18" width="52" height="36"/>
+                                <rect key="frame" x="16" y="38" width="52" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -384,6 +393,7 @@
                             <constraint firstItem="0l0-Kb-O74" firstAttribute="leading" secondItem="zh7-jD-seT" secondAttribute="leadingMargin" id="2Rp-HX-zy5"/>
                             <constraint firstItem="vRT-5A-vf1" firstAttribute="centerY" secondItem="zh7-jD-seT" secondAttribute="centerY" id="4IQ-P3-Wkr"/>
                             <constraint firstItem="0l0-Kb-O74" firstAttribute="top" secondItem="zh7-jD-seT" secondAttribute="topMargin" constant="18" id="bcy-mM-rjG"/>
+                            <constraint firstItem="vRT-5A-vf1" firstAttribute="centerX" secondItem="zh7-jD-seT" secondAttribute="centerX" id="hj9-bI-KbP"/>
                             <constraint firstItem="vRT-5A-vf1" firstAttribute="leading" secondItem="zh7-jD-seT" secondAttribute="leading" constant="50" id="leU-bm-6H4"/>
                             <constraint firstAttribute="trailing" secondItem="vRT-5A-vf1" secondAttribute="trailing" constant="50" id="x7z-Fu-KE7"/>
                         </constraints>

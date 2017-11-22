@@ -82,16 +82,15 @@ class ViewController: UIViewController {
         let number = Int(string)
         
         currentGame.move(number: number!)
+            if currentGame.canMove(number: number!){
         moves += 1
         labelStatus.text = "Moves: \(moves)"
         updateUI()
-            
+            }
             if currentGame.sorted(){
                 labelStatus.text = "You win! 😄"
             }
-        
         }
-        
     }
     
     @IBAction func easyButtonPressed(_ sender: Any) {
